@@ -1,0 +1,27 @@
+<div class="row gy-3 mb-3">
+    <h1 class="h3">Booking Information</h1>
+    <p>
+        You are about to book a land for your beloved one in the graveyard of {{ graveInfo ? graveInfo.city : '' }},
+        wich the cost is {{ graveInfo ? graveInfo.price : '' }} and its measure are
+        {{ graveInfo ? graveInfo.measure.depth : '' }} meters Depth,
+        {{ graveInfo ? graveInfo.measure.height : '' }} meters Height and
+        {{ graveInfo ? graveInfo.measure.width : '' }} meters Width.
+    </p>
+    <p>
+        {{ graveInfo ? graveInfo.description : '' }}
+    </p>
+    <div class="row g-2 d-flex justify-content-center mb-4">
+        <div class="col-4" type="button" *ngFor="let img of graveInfo?.image">
+            <div class="card">
+                <img [src]="img" alt="">
+            </div>
+        </div>
+    </div>
+    <p>
+        Once this is booked you will be called by one of our supervisor to schedule a meeting to arrange 
+        all the procedures.
+    </p>
+    <p>
+        Have a lovely Day.
+    </p>
+</div>

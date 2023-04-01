@@ -1,0 +1,53 @@
+@import "/src/assets/scss/_variables";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-group {
+
+  .form-control {
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+    color: #fff;
+
+    &:focus {
+      border-color: #86b7fe;
+      outline: 0;
+      box-shadow: 0 0 0 0.1rem rgba(28, 182, 152, 0.5);
+
+      +i {
+        box-shadow: 0 0 0 0.1rem rgba(28, 182, 152, 0.5);
+      }
+    }
+  }
+
+  i {
+    background-color: #1CB698;
+    padding: 16px;
+    border: 1px solid;
+  }
+
+  .list-items {
+    border: 1px solid #ced4da;
+    position: absolute;
+    z-index: 999;
+    width: inherit;
+    top: 50px;
+    left: 1px;
+
+    ul li {
+      background: #252A2E;
+      color: #fff;
+      font-size: 13px;
+
+      &:hover {
+        background: #2e3439;
+      }
+    }
+  }
+}

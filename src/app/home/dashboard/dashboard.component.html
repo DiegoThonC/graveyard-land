@@ -1,0 +1,9 @@
+<app-loading *ngIf="!isUserLocationReady; else mapReady"></app-loading>
+
+<ng-template #mapReady>
+    <app-navbar></app-navbar>
+    
+    <div class="home">
+        <router-outlet></router-outlet>
+    </div>    
+</ng-template>

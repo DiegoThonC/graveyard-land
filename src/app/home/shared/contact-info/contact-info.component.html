@@ -1,0 +1,82 @@
+<form [formGroup]="formG" (ngSubmit)="sendData()">
+    <div class="row gy-3 mb-3">
+        <h1 class="h3">Relatives Information</h1>
+        <div class="col-md-6">
+            <label for="name" class="form-label">* Full name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" 
+                    [ngClass]="validField('name')">
+        </div>
+        <div class="col-md-6">
+            <label for="lastName" class="form-label">* Id/Rut</label>
+            <input type="text" class="form-control" id="lastName" formControlName="rut" 
+                    [ngClass]="validField('rut')">
+        </div>
+        <div class="col-md-6">
+            <label for="lastName" class="form-label">* Marital status</label>
+            <select class="form-select" aria-label="Default select example" formControlName="status" 
+                    [ngClass]="validField('status')">
+                <option selected disabled>Select a status</option>
+                <option value="1">Married</option>
+                <option value="2">Single</option>
+                <option value="3">Divorced</option>
+                <option value="3">Widowed</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="name" class="form-label">* Birthdate</label>
+            <input type="date" class="form-control" id="name" formControlName="birthdate" 
+                    [ngClass]="validField('birthdate')">
+        </div>
+        <div class="col-md-6">
+            <label for="lastName" class="form-label">* Relation with the deceased</label>
+            <select class="form-select" aria-label="Default select example" formControlName="relationWith" 
+                    [ngClass]="validField('relationWith')">
+                <option class="py-1" selected disabled>Select a relation</option>
+                <option value="1">Brother/Sister</option>
+                <option value="2">Son/Daughter</option>
+                <option value="3">Father/Mother</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <label for="email" class="form-label">* Email</label>
+            <input type="text" class="form-control" id="email" formControlName="email" 
+                    [ngClass]="validField('email')">
+        </div>
+        <div class="col-md-6">
+            <label for="city" class="form-label">* City</label>
+            <input type="text" class="form-control" id="city" formControlName="city" 
+                    [ngClass]="validField('city')">
+        </div>
+        <div class="col-md-6">
+            <label for="number" class="form-label">* Phone Number</label>
+            <input type="text" class="form-control" id="number" formControlName="phone" 
+                    [ngClass]="validField('phone')">
+        </div>
+    </div>
+    <div class="row gy-3">
+        <h1 class="mt-5 h3">Deceased Information</h1>
+        <div class="col-md-6">
+            <label for="name" class="form-label">* Full name</label>
+            <input type="text" class="form-control" id="name" formControlName="deceasedName" 
+                    [ngClass]="validField('deceasedName')">
+        </div>
+        <div class="col-md-6">
+            <label for="name" class="form-label">* Birthdate</label>
+            <input type="date" class="form-control" id="name" formControlName="deceasedBirthdate" 
+                    [ngClass]="validField('deceasedBirthdate')">
+        </div>
+        <div class="col-md-6">
+            <label for="lastName" class="form-label">* Id/Rut</label>
+            <input type="text" class="form-control" id="lastName" formControlName="deceasedRut" 
+                    [ngClass]="validField('deceasedRut')">
+        </div>
+        <div class="col-md-6">
+            <label for="city" class="form-label">* City</label>
+            <input type="text" class="form-control" id="city" formControlName="deceasedCity" 
+                    [ngClass]="validField('deceasedCity')">
+        </div>
+    </div>
+    <div class="col-12 mt-4">
+        <button class="btn btn-danger w-100" type="submit" [disabled]="formG.invalid">Send Info</button>
+    </div>
+</form>

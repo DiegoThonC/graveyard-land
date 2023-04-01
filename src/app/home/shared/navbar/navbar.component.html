@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="search-spots">GraveBoard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse gap-5" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto align-items-md-center gap-2 gap-md-5">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Choose a new country to search
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between" type="button" (click)="changeLocationSearch('cl', [-70.688931, -33.461965844])">
+                                Chile
+                                <img src="../../../../assets/img/chile-flag.png" width="50" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between" type="button" (click)="changeLocationSearch('us', [-73.99750, 40.709349])">
+                                USA
+                                <img src="../../../../assets/img/usa-flag.webp" width="50" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="d-flex gap-2 align-items-center" id="navbarDropdown2" role="button" data-bs-toggle="dropdown">
+                        <img class="user-img" [src]="user.photoURL" alt="">
+                        {{ user.displayName }}
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li>
+                            <a class="dropdown-item d-flex justify-content-between" type="button" (click)="LogOut()">LogOut</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,42 @@
+@import "/src/assets/scss/_variables";
+
+:host {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* login main container */
+.login-container {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)), url("../../../../assets/img/graveyard-bg.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .login-card {
+        background-color: #252A2E;
+        color: #fff;
+
+        .form-control {
+            height: 45px;
+            background-color: transparent;
+            border-radius: 0;
+            border: 1px solid #ced4da;
+            color: #fff;
+            font-size: 14px;
+    
+            &:focus {
+                border-color: #86b7fe;
+                outline: 0;
+                box-shadow: 0 0 0 0.1rem rgba(28, 182, 152, 0.5);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) { 
+    h3 {
+        font-size: 19px;
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "graveyard-land": {
+      "hosting": {
+        "graveyard-land": [
+          "graveyard-land"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "graveyard-land"
+  }
+}

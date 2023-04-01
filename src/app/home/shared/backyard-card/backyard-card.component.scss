@@ -1,0 +1,26 @@
+@import "/src/assets/scss/_variables";
+
+.backyard-container {
+    color: #fff;
+
+    .card:hover {
+        border: 1px solid rgb(28, 182, 152);
+    }
+
+    .card-body {
+
+        .description {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .price {
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+}
+
+.offcanvas-end {
+    width: 700px;
+}

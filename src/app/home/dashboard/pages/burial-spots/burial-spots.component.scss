@@ -1,0 +1,11 @@
+@import "/src/assets/scss/_variables";
+
+.container {
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) { 
+    h1 {
+        font-size: 20px;
+    }
+}

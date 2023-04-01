@@ -1,0 +1,47 @@
+<h3>Description</h3>
+<div class="d-flex flex-column mb-4">
+    <p class="description-text mb-0">
+        {{ grave ? grave.description : ''  }}
+    </p>
+
+    <div class="d-flex align-items-baseline gap-3">
+        <i class="fa-sharp fa-solid fa-location-dot"></i>
+        <span class="description-text">{{ grave ? grave.city : '' }}</span>
+    </div>
+
+    <div class="d-flex align-items-baseline gap-3">
+        <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+        <span class="description-text">{{ grave ? grave.price : '' | number }}</span>
+    </div>
+</div>
+
+<h3>Measures</h3>
+<div class="d-flex flex-column mb-4">
+    <div class="d-flex align-items-baseline gap-3">
+        <i class="fa-solid fa-ruler"></i>
+        <span class="description-text">{{ grave ? grave.measure.depth : '' | number }} Depth</span>
+    </div>
+
+    <div class="d-flex align-items-baseline gap-3">
+        <i class="fa-solid fa-ruler-vertical"></i>
+        <span class="description-text">{{ grave ? grave.measure.height : '' | number }} Height</span>
+    </div>
+
+    <div class="d-flex align-items-baseline gap-3">
+        <i class="fa-solid fa-ruler-horizontal"></i>
+        <span class="description-text">{{ grave ? grave.measure.width : '' | number }} Width</span>
+    </div>
+</div>
+
+<h3>Images</h3>
+<div class="row g-2 d-flex justify-content-center mb-4">
+    <div class="col-4" type="button" *ngFor="let img of grave?.image">
+        <div class="card">
+            <img #img src="{{ img }}" alt="" (click)="swap(this)">
+        </div>
+    </div>
+</div>
+
+<div class="container-button d-flex justify-content-center pt-4">
+    <a class="px-5 py-2" type="button" routerLink="/dashboard/booking-form" [state]="grave">Book</a>
+</div>

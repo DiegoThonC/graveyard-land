@@ -1,0 +1,29 @@
+<app-empty-data *ngIf="graves.length === 0; else backyard"></app-empty-data>
+
+<ng-template #backyard>
+    <div class="backyard-container row g-2 mt-3">
+        <div class="backyards-item col-md-6 col-lg-3" type="button" *ngFor="let grave of graves" (click)="sendGraveObj(grave)"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <div class="card bg-dark">
+                <img src="{{ grave.image ? grave.image[1] : '' }}" alt="">
+                <div class="card-body">
+                    <p class="description"> {{ grave.description }} </p>
+                    <span class="price">
+                        <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                        {{ grave.price | number }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h2 class="m-0" id="offcanvasRightLabel">Information</h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <app-info-card></app-info-card>
+      </div>
+    </div>
+</ng-template>
