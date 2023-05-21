@@ -1,7 +1,5 @@
-@import "/src/assets/scss/_variables";
-
 nav {
-    background-color: #1e2326;
+    background-color: rgb(77 79 109);
     color: #fff;
     border-bottom: 2px solid rgba(28, 182, 152);
 
@@ -18,16 +16,16 @@ nav {
     }
 
     ul {
-        background-color: #1e2326;
         left: unset;
         right: 0;
+        background-color: rgb(77 79 109);
 
         li  a {
             color: #fff;
     
             &:hover {
+                background-color: rgb(77 79 109);
                 color: #1CB698;
-                background-color: #2e3439;
             }
     
             &:focus {

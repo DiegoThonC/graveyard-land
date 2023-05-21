@@ -17,7 +17,6 @@ export class NavbarComponent {
   constructor(private auth: AuthService,
               private placesService: PlacesService,
               private mapService: MapService) {
-    // this.changeLocationSearch('cl', placesService.useLocation!);
     this.getInfoUser();
   }
 

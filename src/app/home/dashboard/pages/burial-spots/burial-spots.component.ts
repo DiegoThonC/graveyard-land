@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './burial-spots.component.html',
   styleUrls: ['./burial-spots.component.scss']
 })
-export class BurialSpotsComponent {
-
-}
+export class BurialSpotsComponent { }

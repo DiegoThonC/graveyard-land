@@ -1,5 +1,3 @@
-@import "/src/assets/scss/_variables";
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -41,12 +39,12 @@ input::-webkit-inner-spin-button {
     left: 1px;
 
     ul li {
-      background: #252A2E;
+      background: rgb(77 79 109);
       color: #fff;
       font-size: 13px;
 
       &:hover {
-        background: #2e3439;
+        background: rgb(68, 69, 91);
       }
     }
   }

@@ -15,7 +15,6 @@ export class BackyardCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.graveService.getGraves().subscribe( resp => this.graves = resp );
-    // this.graveService.addGraves();
   }
 
   sendGraveObj(objectGrave: Grave) {

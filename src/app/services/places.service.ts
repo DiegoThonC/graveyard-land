@@ -10,7 +10,7 @@ export class PlacesService {
   
   public isLoadingPlaces: boolean = false;
   public places: Feature[] = [];
-  public country!: string;
+  public country: string = 'cl';
 
   public useLocation?: [number, number];
 

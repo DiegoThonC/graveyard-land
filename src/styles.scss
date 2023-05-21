@@ -1,7 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+@import './assets/scss/general';
+
 body {
+    background-color: rgba(52, 53, 65, 1);
     font-family: 'Righteous', sans-serif;
+    min-width: 350px;
 }
 
 html {
@@ -10,8 +12,11 @@ html {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
-    /* Remove scrollbar space */
-    background: transparent;
-    /* Optional: just make scrollbar invisible */
+    width: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #7781a2;
+    box-shadow: inset -1px -1px #595668, inset 1px 1px #727996, inset -2px -2px grey, inset 2px 2px #5a4e66;
 }

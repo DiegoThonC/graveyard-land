@@ -1,26 +1,33 @@
-@import "/src/assets/scss/_variables";
-
 .backyard-container {
     color: #fff;
 
+    .card {
+        background-color: rgba(68, 70, 84, 1);
+    }
+
     .card:hover {
         border: 1px solid rgb(28, 182, 152);
+    }
+
+    img {
+        height: 200px;
     }
 
     .card-body {
 
         .description {
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 300;
         }
 
         .price {
             font-size: 15px;
-            font-weight: 300;
+            font-weight: 600;
         }
     }
 }
 
 .offcanvas-end {
     width: 700px;
+    background-color: rgba(68, 70, 84, 1);
 }
