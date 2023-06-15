@@ -1,7 +1,7 @@
 @import './assets/scss/general';
 
 body {
-    background-color: rgba(52, 53, 65, 1);
+    background-color: rgba(52, 53, 65, 1) !important;
     font-family: 'Righteous', sans-serif;
     min-width: 350px;
 }
@@ -20,3 +20,6 @@ html {
     background-color: #7781a2;
     box-shadow: inset -1px -1px #595668, inset 1px 1px #727996, inset -2px -2px grey, inset 2px 2px #5a4e66;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

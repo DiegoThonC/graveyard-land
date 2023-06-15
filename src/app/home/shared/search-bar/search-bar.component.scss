@@ -13,6 +13,10 @@ input::-webkit-inner-spin-button {
     border-radius: 0;
     color: #fff;
 
+    &::placeholder {
+      color: #fff;
+    }
+
     &:focus {
       border-color: #86b7fe;
       outline: 0;
