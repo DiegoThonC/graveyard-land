@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-import { Firestore } from '@angular/fire/firestore';
 import { User } from 'src/app/model/User.model';
 
 @Injectable({
@@ -11,8 +10,7 @@ import { User } from 'src/app/model/User.model';
 export class AuthService {
 
   constructor(private fireAuth: AngularFireAuth,
-              private router: Router,
-              public afs: Firestore) { }
+              private router: Router) { }
 
   login(email: string, password: string) {
     this.fireAuth.signInWithEmailAndPassword(email, password)
@@ -33,7 +31,6 @@ export class AuthService {
     this.fireAuth.createUserWithEmailAndPassword(email, password)
       .then( res => {
         alert('registro completo');
-        this.router.navigate(['auth/login']);
         this.sendEmailForVerification(res.user);
       }, err => {
         alert('error' + err.message);
@@ -55,26 +52,19 @@ export class AuthService {
         this.setUserData(res.user);
         this.router.navigate(['dashboard']);
         localStorage.setItem('token', JSON.stringify(res.user?.uid));
-      }, err => {
+      }, err => { 
         alert('error' + err.message);
       })
   }
 
   forgotPassword(email: string) {
-    this.fireAuth.sendPasswordResetEmail(email)
-      .then( () => {
-        this.router.navigate(['auth/verify-email']);
-      }, err => {
-        alert('error' + err.message);
-      })
+    this.fireAuth.sendPasswordResetEmail(email).then( () => this.router.navigate(['auth/verify-email']), 
+                                                      err => alert('error' + err.message));
   }
 
   sendEmailForVerification(user: any) {
-    user.sendEmailVerification().then( (res: any) => {
-      this.router.navigate(['auth/verify-email']);
-    }, (err: any) => {
-      alert('error' + err.message);
-    })
+    user.sendEmailVerification().then( () => this.router.navigate(['auth/verify-email']),
+                                       (err: any) => alert('error' + err.message));
   }
   
   setUserData(user: any) {

@@ -8,14 +8,14 @@ export interface Places {
 export interface Feature {
     id: string;
     type: string;
-    place_type: string[];
-    relevance: number;
-    properties: Properties;
-    text: string;
+    place_type?: string[];
+    relevance?: number;
+    properties?: Properties;
+    text?: string;
     place_name: string;
-    center: number[];
-    geometry: Geometry;
-    context: Context[];
+    center?: number[];
+    geometry?: Geometry;
+    context?: Context[];
     bbox?: number[];
 }
 

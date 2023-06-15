@@ -34,8 +34,8 @@ export class MapService {
     if (!this.isMapReady) throw Error('mapa no esta inicializado');
     
     this.graveService.getGraves().subscribe(resp => {
-      resp.forEach( coords => {
-        const {long, lat} = coords;
+      resp.forEach( (coords: any) => {
+        const {long, lat} = coords.payload.doc.data();
         new Marker().setLngLat([long, lat]).addTo(this.map!);
       });
     });

@@ -31,8 +31,8 @@ export class ContactInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.formG.reset({
-      'name': this.infoUser.displayName,
-      'email': this.infoUser.email
+      'name': this.infoUser?.displayName,
+      'email': this.infoUser?.email
     });
   }
 
@@ -48,8 +48,8 @@ export class ContactInfoComponent implements OnInit {
     }
     alert('Information sent, you will be contacted.');
     this.formG.reset({
-      'name': this.infoUser.displayName,
-      'email': this.infoUser.email
+      'name': this.infoUser?.displayName,
+      'email': this.infoUser?.email
     });
   }
 }

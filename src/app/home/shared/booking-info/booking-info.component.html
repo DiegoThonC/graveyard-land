@@ -3,9 +3,9 @@
     <p>
         You are about to book a land for your beloved one in the graveyard of {{ graveInfo ? graveInfo.city : '' }},
         wich the cost is {{ graveInfo ? graveInfo.price : '' }} and its measure are
-        {{ graveInfo ? graveInfo.measure.depth : '' }} meters Depth,
-        {{ graveInfo ? graveInfo.measure.height : '' }} meters Height and
-        {{ graveInfo ? graveInfo.measure.width : '' }} meters Width.
+        {{ graveInfo ? graveInfo.measure?.depth : '' }} meters Depth,
+        {{ graveInfo ? graveInfo.measure?.height : '' }} meters Height and
+        {{ graveInfo ? graveInfo.measure?.width : '' }} meters Width.
     </p>
     <p>
         {{ graveInfo ? graveInfo.description : '' }}

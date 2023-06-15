@@ -21,5 +21,4 @@ export class BookingInfoComponent implements OnInit {
   getGraveInfo() {
     this.activatedRoute.paramMap.pipe(map(() => window.history.state)).subscribe( res => this.graveInfo = res );
   }
-  
 }

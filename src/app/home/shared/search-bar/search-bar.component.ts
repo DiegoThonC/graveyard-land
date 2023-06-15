@@ -9,9 +9,6 @@ import { PlacesService } from 'src/app/services/places.service';
   styleUrls: ['./search-bar.component.scss']
 })
 export class searchBarComponent {
-
-  private debounceTimer?: NodeJS.Timeout;
-
   lnglat!: number[][];
   selectedPlace: string = '';
 
@@ -27,18 +24,14 @@ export class searchBarComponent {
   }
 
   search(term: string = '') {
-    if (this.debounceTimer) clearTimeout( this.debounceTimer );
-
-    this.debounceTimer = setTimeout(() => {
-
+    setTimeout(() => {
       const searchTerm = term.toLowerCase();
-      this.placeService.searchPlaces(searchTerm);
-      
+      this.placeService.searchPlaces(searchTerm);      
     }, 350);
   }
 
   flyTo( place: Feature ) {
-    const [lng, lat] = place.center;
+    const [lng, lat] = place.center!;
     this.mapService.flyTo([lng, lat]);
 
     this.selectedPlace = place.place_name;

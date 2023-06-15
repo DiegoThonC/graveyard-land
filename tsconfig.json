@@ -24,7 +24,8 @@
       "dom"
     ],
     "types": [
-      "node"
+      "node",
+      "jest",
     ]
   },
   "angularCompilerOptions": {

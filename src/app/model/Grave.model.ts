@@ -6,7 +6,7 @@ export interface Grave {
     long: number,
     lat: number,
     city: string,
-    measure: Measure
+    measure?: Measure
 }
 
 export interface Measure {

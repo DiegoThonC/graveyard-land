@@ -19,17 +19,17 @@
 <div class="d-flex flex-column mb-4">
     <div class="d-flex align-items-baseline gap-3">
         <i class="fa-solid fa-ruler"></i>
-        <span class="description-text">{{ grave ? grave.measure.depth : '' | number }} Depth</span>
+        <span class="description-text">{{ grave ? grave.measure?.depth : '' | number }} Depth</span>
     </div>
 
     <div class="d-flex align-items-baseline gap-3">
         <i class="fa-solid fa-ruler-vertical"></i>
-        <span class="description-text">{{ grave ? grave.measure.height : '' | number }} Height</span>
+        <span class="description-text">{{ grave ? grave.measure?.height : '' | number }} Height</span>
     </div>
 
     <div class="d-flex align-items-baseline gap-3">
         <i class="fa-solid fa-ruler-horizontal"></i>
-        <span class="description-text">{{ grave ? grave.measure.width : '' | number }} Width</span>
+        <span class="description-text">{{ grave ? grave.measure?.width : '' | number }} Width</span>
     </div>
 </div>
 

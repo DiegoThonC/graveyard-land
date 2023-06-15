@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { User } from 'firebase/auth';
-import { LngLatLike } from 'mapbox-gl';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { MapService } from 'src/app/services/map.service';
 import { PlacesService } from 'src/app/services/places.service';
@@ -31,7 +30,5 @@ export class NavbarComponent {
 
   getInfoUser() {
     this.user = JSON.parse(localStorage.getItem('user')!);
-    console.log(this.user);
-    
   }
 }

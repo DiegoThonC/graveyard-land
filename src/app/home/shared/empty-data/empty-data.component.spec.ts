@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EmptyDataComponent } from './empty-data.component';
 
 describe('EmptyDataComponent', () => {

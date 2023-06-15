@@ -13,10 +13,8 @@ export class ButtonStartOverComponent {
               private mapService: MapService) { }
 
   flyTo() {
-
     if (!this.placesService.useLocation) throw Error('No available location.');
     if (!this.mapService.isMapReady) throw Error('No available map.');
-
     this.mapService.flyTo( this.placesService.useLocation );
   }
 }
